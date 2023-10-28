@@ -1,0 +1,143 @@
+* {
+    background-color: floralwhite;
+    border: 1px red solid;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #6dc3d8;
+}
+
+nav, .logo {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6dc3d8;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+a, .nav-items {
+    padding: 15px;
+    background-color: #6dc3d8;
+    text-decoration: none;
+    color: black;
+}
+
+#logo, #logo-text {
+    height: 80px;
+    background-color: #6dc3d8;
+}
+
+#pic {
+    height: 50%;
+    width: 50%;
+}
+
+a:hover {
+    color:#6dc3d8;
+    background-color: black;
+}
+
+.hero {
+    background-color: #6dc3d8;
+    flex: 1;
+    align-items: center;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 60vh;
+    place-items: center;
+    background-color: #6dc3d8;
+
+}
+
+.column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #6dc3d8;
+
+}
+
+.column-left h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    background-color: #6dc3d8;
+
+}
+
+.column-left p {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    background-color: #6dc3d8;
+
+}
+
+button {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    border: none;
+    color: #6dc3d8;
+    background-color: black;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #6dc3d8;
+    color: black;
+}
+
+.column-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem;
+    background-color: #6dc3d8;
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    a {
+        padding: 10px;
+    }
+}
+
+footer, footer p {
+    background-color: #6dc3d8;
+    text-align: center;
+    padding: 10px;
+    color: black;
+}
