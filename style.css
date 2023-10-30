@@ -1,143 +1,219 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Anything above here is from Andy Bell's 'CSS Reset'! https://andy-bell.co.uk/a-more-modern-css-reset/ */
+
 * {
-    background-color: floralwhite;
-    border: 1px red solid;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: monospace;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #6dc3d8;
+    background-color: #FFF5E0;
+    color: #141E46;
+    height: 100svh;
+    /* display: flex;
+    flex-direction: column; */
 }
 
-nav, .logo {
-    height: 80px;
+.home {
+    flex: 1;
+    overflow: visible; /* Determines whether to clip content or add scrollbars */
+}
+
+nav {
+    position: fixed;
+    background-color: #FF6969;
     display: flex;
     justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: #6dc3d8;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-style: italic;
+    font-size: 2.5rem;
+}
+.nav-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 2rem;
+    margin-right: 40px;
 }
 
-a, .nav-items {
-    padding: 15px;
-    background-color: #6dc3d8;
+nav a {
+    color: #C70039;
     text-decoration: none;
-    color: black;
-}
-
-#logo, #logo-text {
-    height: 80px;
-    background-color: #6dc3d8;
-}
-
-#pic {
-    height: 50%;
-    width: 50%;
 }
 
 a:hover {
-    color:#6dc3d8;
-    background-color: black;
+    color: #FFF5E0;
 }
 
 .hero {
-    background-color: #6dc3d8;
-    flex: 1;
-    align-items: center;
-}
-
-.hero-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 60vh;
-    place-items: center;
-    background-color: #6dc3d8;
-
-}
-
-.column-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #6dc3d8;
-
-}
-
-.column-left h1 {
-    margin-bottom: 1rem;
-    font-size: 3rem;
-    background-color: #6dc3d8;
-
-}
-
-.column-left p {
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    background-color: #6dc3d8;
-
-}
-
-button {
-    padding: 1rem 3rem;
-    font-size: 1rem;
-    border: none;
-    color: #6dc3d8;
+    width: 100%;
     background-color: black;
-    cursor: pointer;
-    border-radius: 50px;
-    font-weight: bold;
 }
 
-button:hover {
-    background-color: #6dc3d8;
-    color: black;
+#logo {
+    height: 120px;
+    width: 120px;
 }
 
-.column-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0rem 2rem;
-    background-color: #6dc3d8;
-
-
+#pic {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100svh;
+    width: 100%;
+    display: block;
 }
 
-@media screen and (max-width: 768px) {
-    .hero-container {
-        grid-template-columns: 1fr;
-        place-items: center;
-    }
+.container {
+    max-width: 100rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
 
-    nav {
-        flex-direction: column;
-        height: auto;
-    }
+.stacked {
+    display: grid;
+}
 
-    .nav-items {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
+.stacked > * {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
 
-    a {
-        padding: 10px;
+.product-grid {
+    display: grid;
+    gap: .25rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.card {
+    border: 3px solid hotpink;
+    aspect-ratio: 1 / 1.5;
+}
+
+.card_content {
+    background: white;
+    align-self: end;
+    margin: .5rem .5rem 2rem;
+    padding: .5rem;
+    box-shadow: 0.25rem 1rem rgb(0 0 0 /.1);
+}
+
+.card_title {
+    font-size: 1.25rem;
+    line-height: 1.1;
+    color: firebrick;
+}
+
+.card_price {
+    font-size: 1.75rem;
+}
+
+.card_img {
+    width: 100%;
+    aspect-ratio: 1/1; /*Makes the height and width of each image the same (ie makes them squares) */
+    object-fit: cover; /*Centers image and cuts out any excess that won't fit in the defined image size (in this case 100%, ratio 1:1 */
+}
+
+@media (min-width: 60em) { /* These features only kick in when the screen size has a minimum width of 60em, otherwise maintains default grid behaviour */
+    .card.featured { /*This creates a larger 'featured' tile that takes up 2x2 space in the grid to bring attention to it */
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+    
+    .card.featured .card_img {
+        aspect-ratio: 1 / 1.25;
+    }
+    
+    .card.featured .card_title {
+        font-size: 1.75rem;
     }
 }
 
-footer, footer p {
-    background-color: #6dc3d8;
-    text-align: center;
-    padding: 10px;
-    color: black;
+footer {
+    font-size: 2rem;
+    background-color: #141E46;
+    color: #FFF5E0;
 }
