@@ -217,6 +217,18 @@ h2 {
     font-size: 3rem;
 }
 
+#contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    flex: 1; /* Allow the form to grow and take up available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @media (min-width: 60em) { /* These features only kick in when the screen size has a minimum width of 60em, otherwise maintains default grid behaviour */
     .card.featured { /*This creates a larger 'featured' tile that takes up 2x2 space in the grid to bring attention to it */
         grid-row: span 2;
