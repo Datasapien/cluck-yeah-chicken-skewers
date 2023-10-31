@@ -128,7 +128,7 @@ a:hover {
 }
 
 .hero {
-    width: 100%;
+    width: auto;
     background-color: black;
 }
 
@@ -142,7 +142,7 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
+    width: 100svw;
     display: block;
 }
 
@@ -241,6 +241,25 @@ form {
     
     .card.featured .card_title {
         font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 100em) {
+    .nav-left {
+        display: none;
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form {
+        margin-top: 0;
+    }
+
+    .nav-right {
+        padding-left: 0.5em;
     }
 }
 
