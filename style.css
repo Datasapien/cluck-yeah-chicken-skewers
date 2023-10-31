@@ -94,7 +94,7 @@ body {
 }
 
 nav {
-    position: fixed;
+    /* position: fixed; */
     background-color: #FF6969;
     display: flex;
     justify-content: space-between;
@@ -142,34 +142,45 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100svh;
     width: 100%;
     display: block;
 }
 
-.container {
-    max-width: 100rem;
-    margin-inline: auto;
-    padding-inline: 2rem;
+.section_text, form {
+    margin: 2rem;
 }
 
-.stacked {
+span {
+    font-size: 1.5rem;
+    color: #C70039;
+    font-weight: bolder;
+}
+
+
+.container {
+    max-width: 150rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    padding: 2rem;
+}
+
+/* .stacked {
     display: grid;
 }
 
 .stacked > * {
     grid-column: 1/2;
     grid-row: 1/2;
-}
+} */
 
 .product-grid {
     display: grid;
-    gap: .25rem;
+    gap: .75rem;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
 .card {
-    border: 3px solid hotpink;
+    /* border: 5px solid #C70039; */
     aspect-ratio: 1 / 1.5;
 }
 
@@ -195,6 +206,15 @@ a:hover {
     width: 100%;
     aspect-ratio: 1/1; /*Makes the height and width of each image the same (ie makes them squares) */
     object-fit: cover; /*Centers image and cuts out any excess that won't fit in the defined image size (in this case 100%, ratio 1:1 */
+}
+
+
+p {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 3rem;
 }
 
 @media (min-width: 60em) { /* These features only kick in when the screen size has a minimum width of 60em, otherwise maintains default grid behaviour */

@@ -14,35 +14,31 @@
     <div class="home">
       <nav>
         <div class="nav-left">
-          <img id="logo" src="img/cluck-yeah-logo.png" alt="Cluck Yeah! Logo">
+          <a href="#home"><img id="logo" src="img/cluck-yeah-logo.png" alt="Cluck Yeah! Logo"></a>          
           <h1>Cluck Yeah!</h1>
-        </div>
-  
+        </div>  
         <div class="nav-right">
           <a href="#menu">Menu</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </div>
-      </nav>    
-    
+      </nav>        
       <div class="hero">
         <img id="pic" src="img/index_image.jpg" alt="A delicious looking skewer, yummy.">
       </div>
     </div>
 
     <div id="menu">
-      <h2>Got an itch that only chicken can scratch?</h2>
-      <p>Well you've come to the right place! Here at <span>Cluck Yeah!</span> we pride ourselves on our mouth-watering dishes that won't break the bank. Cheep 'n' tasty indeed!</p>
-      
+      <h2 class="section_text">Got an itch that only chicken can scratch?</h2>
+      <p class="section_text">Well you've come to the right place! Here at <span>Cluck Yeah!</span> we pride ourselves on our mouth-watering dishes that won't break the bank. Cheep 'n' tasty indeed!</p>
       <div class="container">
          <div class="product-grid">
-
           <div class="card stacked featured">
             <img src="img/kebab_1.jpg" alt="A tasty kebab" class="card_img">
             <div class="card_content">
               <h2 class="card_title">Kebab 1</h2>
               <p class="card_price">$10</p>
-              <p class="card_description">A tasty kebab.</p>
+              <p class="card_description">Chargilled to perfection - our signature dish!</p>
             </div>
           </div>
 
@@ -51,7 +47,7 @@
             <div class="card_content">
               <h2 class="card_title">Kebab 2</h2>
               <p class="card_price">$12</p>
-              <p class="card_description">A tasty kebab.</p>
+              <p class="card_description">A unique combination of sweet fruit and umami seasoning to tickle your tastebuds.</p>
             </div>
           </div>
 
@@ -60,7 +56,7 @@
             <div class="card_content">
               <h2 class="card_title">Kebab 3</h2>
               <p class="card_price">$10</p>
-              <p class="card_description">A tasty kebab.</p>
+              <p class="card_description">A classic blend of garlic salt on succulent chicken - what more could you want?</p>
             </div>
           </div>
 
@@ -69,7 +65,7 @@
             <div class="card_content">
               <h2 class="card_title">Kebab 4</h2>
               <p class="card_price">$13</p>
-              <p class="card_description">A tasty kebab.</p>
+              <p class="card_description">Flame-grilled tender chicken with a pepper seasoning. Yum!</p>
             </div>
           </div>
 
@@ -78,7 +74,7 @@
             <div class="card_content">
               <h2 class="card_title">Kebab 5</h2>
               <p class="card_price">$7</p>
-              <p class="card_description">A tasty kebab.</p>
+              <p class="card_description">This one is as colourful as it is healthy - you'll feel great afterwards!</p>
             </div>
           </div>
 
@@ -87,7 +83,7 @@
             <div class="card_content">
               <h2 class="card_title">Kebab 6</h2>
               <p class="card_price">$13</p>
-              <p class="card_description">A tasty kebab.</p>
+              <p class="card_description">Not even sure what this one is if I am honest, but I bet you won't regret trying it!</p>
             </div>
           </div>
 
@@ -96,13 +92,28 @@
             <div class="card_content">
               <h2 class="card_title">Kebab 7</h2>
               <p class="card_price">$8</p>
-              <p class="card_description">A tasty kebab.</p>
+              <p class="card_description">This one packs a punch with its spicy ghost peppers wedged between juicy chicken!</p>
             </div>
           </div>
-
          </div>
       </div>
 
+    </div>
+
+    <div id="about">
+      <h2 class="section_text">You want to know about us?! That's so sweet of you!</h2>
+      <p class="section_text"><span>Cluck Yeah!</span> is the brainchild of Bambi and Babo. Bambi is the brawn - she does the food prep, the cooking, and the service with a smile. 
+        Babo is the brains - he does the behind the scenes website development and maintenance, and helps with marketing and little bits and bobs! 
+        So thank Bambi for the flavour, thank Babo for the fervour.</p> 
+    </div>
+
+    <div id="contact">
+      <h2 class="section_text">Chuck us a message!</h2>
+      <p class="section_text">You want to send us some fan mail? Want to rave about how good our flavours are? Have a bone to pick with us?</p>
+      <form action="submit_message.php" method="post">
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here (be nice!)"></textarea>
+        <button type="submit">Cluck!</button>
+    </form>
     </div>
 
     <footer id="contact">
